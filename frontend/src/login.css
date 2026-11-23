@@ -1,0 +1,514 @@
+
+/*!* 页面整体背景 *!*/
+/*.login-page {*/
+/*  min-height: 100vh;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  padding: 24px;*/
+/*  box-sizing: border-box;*/
+/*  background: #f3f6fb;*/
+/*  font-family: Arial, sans-serif;*/
+/*}*/
+
+/*!* 登录卡片 *!*/
+/*.login-card {*/
+/*  width: 100%;*/
+/*  max-width: 400px;*/
+/*  padding: 36px 32px;*/
+/*  box-sizing: border-box;*/
+/*  background: #ffffff;*/
+/*  border: 1px solid #e5eaf2;*/
+/*  border-radius: 12px;*/
+/*  box-shadow: 0 8px 30px rgba(31, 45, 61, 0.08);*/
+/*}*/
+
+/*!* 标题 *!*/
+/*.login-title {*/
+/*  margin: 0 0 8px;*/
+/*  color: #1f2937;*/
+/*  font-size: 28px;*/
+/*  text-align: center;*/
+/*}*/
+
+/*.login-subtitle {*/
+/*  margin: 0 0 28px;*/
+/*  color: #6b7280;*/
+/*  font-size: 14px;*/
+/*  text-align: center;*/
+/*}*/
+
+/*!* 表单 *!*/
+/*.login-form {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  gap: 18px;*/
+/*}*/
+
+/*.login-field {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  gap: 8px;*/
+/*}*/
+
+/*.login-field label {*/
+/*  color: #374151;*/
+/*  font-size: 14px;*/
+/*  font-weight: 600;*/
+/*}*/
+
+/*.login-field input {*/
+/*  width: 100%;*/
+/*  height: 44px;*/
+/*  padding: 0 12px;*/
+/*  box-sizing: border-box;*/
+/*  border: 1px solid #d1d5db;*/
+/*  border-radius: 7px;*/
+/*  outline: none;*/
+/*  background: #ffffff;*/
+/*  color: #111827;*/
+/*  font-size: 14px;*/
+/*  transition: border-color 0.2s, box-shadow 0.2s;*/
+/*}*/
+
+/*.login-field input:focus {*/
+/*  border-color: #2563eb;*/
+/*  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);*/
+/*}*/
+
+/*!* 登录按钮 *!*/
+/*.login-button {*/
+/*  width: 100%;*/
+/*  height: 46px;*/
+/*  margin-top: 4px;*/
+/*  border: none;*/
+/*  border-radius: 7px;*/
+/*  background: #25eb95;*/
+/*  color: #ffffff;*/
+/*  font-size: 16px;*/
+/*  font-weight: 600;*/
+/*  cursor: pointer;*/
+/*  transition: background 0.2s;*/
+/*}*/
+
+/*.login-button:hover {*/
+/*  background: #1d4ed8;*/
+/*}*/
+
+/*.login-button:disabled {*/
+/*  background: #93b4f5;*/
+/*  cursor: not-allowed;*/
+/*}*/
+
+/*!* 错误提示 *!*/
+/*.login-error {*/
+/*  margin: 0;*/
+/*  color: #dc2626;*/
+/*  font-size: 14px;*/
+/*  line-height: 1.5;*/
+/*}*/
+
+/*.login-register-link {*/
+/*  display: flex;*/
+/*  justify-content: flex-end;*/
+/*  align-items: center;*/
+/*  gap: 5px;*/
+/*  margin-top: 12px;*/
+/*  font-size: 14px;*/
+/*  color: #666;*/
+/*}*/
+
+/*.login-register-link button {*/
+/*  border: none;*/
+/*  background: none;*/
+/*  color: #2563eb;*/
+/*  cursor: pointer;*/
+/*  font-size: 14px;*/
+/*  padding: 4px;*/
+/*}*/
+
+/*.login-register-link button:hover {*/
+/*  text-decoration: underline;*/
+/*}*/
+
+
+/* ===== 全局基础样式 ===== */
+* {
+  box-sizing: border-box;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: #f3f7f8;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: #172b32;
+}
+
+.auth-shell {
+  width: 100%;
+  max-width: 1040px;
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 24px 70px rgba(22, 72, 75, 0.12);
+}
+
+/* ===== 左侧品牌区域 ===== */
+.auth-brand-panel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 44px 36px;
+  color: #ffffff;
+  background: linear-gradient(145deg, #087f83 0%, #0c9e96 52%, #42bba5 100%);
+}
+
+.auth-brand-panel::before,
+.auth-brand-panel::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.auth-brand-panel::before {
+  width: 340px;
+  height: 340px;
+  right: -135px;
+  top: 110px;
+}
+
+.auth-brand-panel::after {
+  width: 250px;
+  height: 250px;
+  right: -90px;
+  top: 155px;
+}
+
+.auth-brand-content,
+.auth-brand-footer,
+.auth-brand-top {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-brand-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-brand-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.auth-brand-name {
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: 0.3px;
+}
+
+.auth-brand-caption {
+  margin-top: 5px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.auth-brand-content {
+  margin: 65px 0;
+}
+
+.auth-brand-eyebrow {
+  display: inline-block;
+  padding: 7px 12px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.auth-brand-title {
+  max-width: 400px;
+  margin: 0;
+  font-size: clamp(30px, 3.5vw, 42px);
+  line-height: 1.35;
+  font-weight: 650;
+  letter-spacing: -0.8px;
+}
+
+.auth-brand-description {
+  max-width: 350px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.auth-brand-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.auth-brand-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.93);
+}
+
+.auth-feature-check {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.17);
+  font-size: 12px;
+}
+
+.auth-brand-footer {
+  font-size: 12px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* ===== 右侧表单区域 ===== */
+.auth-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 48px;
+}
+
+.auth-form-inner {
+  width: 100%;
+  max-width: 360px;
+}
+
+.auth-heading {
+  margin: 0;
+  color: #17363a;
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.auth-subtitle {
+  margin: 12px 0 32px;
+  color: #829195;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.auth-field label {
+  color: #344c50;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.auth-field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid #dce6e7;
+  border-radius: 9px;
+  outline: none;
+  background: #fbfdfd;
+  color: #17363a;
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.auth-field input::placeholder {
+  color: #a7b4b6;
+}
+
+.auth-field input:hover {
+  border-color: #a9ceca;
+}
+
+.auth-field input:focus {
+  border-color: #0c9e96;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(12, 158, 150, 0.12);
+}
+
+.auth-button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 3px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(100deg, #087f83, #0c9e96);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(8, 127, 131, 0.16);
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.auth-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 20px rgba(8, 127, 131, 0.23);
+}
+
+.auth-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.auth-message {
+  margin: 0;
+  padding: 11px 13px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.auth-error {
+  color: #b42318;
+  background: #fff1f0;
+  border: 1px solid #ffd7d2;
+}
+
+.auth-success {
+  color: #087443;
+  background: #ecfdf3;
+  border: 1px solid #c6f0d5;
+}
+
+.auth-switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 4px;
+  color: #829195;
+  font-size: 13px;
+}
+
+.auth-link {
+  padding: 3px 0;
+  border: none;
+  background: transparent;
+  color: #078a85;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.auth-link:hover {
+  color: #056c6a;
+  text-decoration: underline;
+}
+
+.auth-security-note {
+  margin-top: 27px;
+  padding-top: 18px;
+  border-top: 1px solid #edf1f1;
+  color: #9aa8aa;
+  font-size: 11px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ===== 平板和手机适配 ===== */
+@media (max-width: 760px) {
+  .auth-page {
+    padding: 20px 14px;
+  }
+
+  .auth-shell {
+    max-width: 480px;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    border-radius: 17px;
+  }
+
+  .auth-brand-panel {
+    min-height: 220px;
+    padding: 25px 26px;
+  }
+
+  .auth-brand-content {
+    margin: 35px 0 15px;
+  }
+
+  .auth-brand-title {
+    font-size: 27px;
+  }
+
+  .auth-brand-description {
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .auth-brand-features {
+    display: none;
+  }
+
+  .auth-brand-footer {
+    margin-top: 10px;
+  }
+
+  .auth-form-panel {
+    padding: 34px 26px;
+  }
+
+  .auth-heading {
+    font-size: 26px;
+  }
+
+  .auth-subtitle {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 380px) {
+  .auth-brand-panel {
+    padding: 22px 20px;
+  }
+
+  .auth-form-panel {
+    padding: 30px 20px;
+  }
+}
