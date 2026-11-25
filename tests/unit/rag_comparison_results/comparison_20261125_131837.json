@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-11-25T13:18:37",
+  "model": "qwen3.8-max",
+  "question": "What are the main growth drivers of this industry discussed in the report?",
+  "without_rag": "I don’t have the report or its content available, so I can’t identify the specific main growth drivers it discusses. Please share the report, excerpt, or relevant details, and I can summarize them.",
+  "with_rag": "ERROR: 403 Client Error: Forbidden for url: http://127.0.0.1:8000/api/v1/chat"
+}

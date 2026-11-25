@@ -40,11 +40,12 @@ class ChatService:
             user_id: int,
     ) -> ChatResponse:
 
-        # 1. 将 session_id 转换为数据库中的整数 ID
-        try:
-            session_id = int(request.session_id)
-        except ValueError:
-            raise RuntimeError("无效的会话 ID")
+        # 1. 获取数据库会话 ID
+        session_id = request.session_id
+        memory_session_id = str(session_id)
+
+        # 统一内存中的 session key
+        memory_session_id = str(session_id)
 
         # 2. 检查会话是否存在
         session = (
@@ -63,7 +64,7 @@ class ChatService:
         documents = self.retriever.retrieve(request.message)
 
         # 4. 获取历史对话
-        history = self.memory.get(request.session_id)
+        history = self.memory.get(memory_session_id)
 
         # 5. 如果内存中没有历史记录，从数据库读取
         if not history:
@@ -102,14 +103,14 @@ class ChatService:
 
         # 8. 保存用户消息到内存
         self.memory.add(
-            request.session_id,
+            memory_session_id,
             "user",
             request.message
         )
 
         # 9. 保存 AI 回复到内存
         self.memory.add(
-            request.session_id,
+            memory_session_id,
             "assistant",
             answer
         )

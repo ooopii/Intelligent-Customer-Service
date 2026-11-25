@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-11-25T13:40:13",
+  "model": "qwen3.8-max",
+  "question": "What are the main growth drivers of this industry discussed in the report?",
+  "without_rag": "I don’t have the report or its contents available, so I can’t identify the main growth drivers discussed in it.\n\nPlease paste the relevant section or upload the report, and I can summarize the key growth drivers for you.",
+  "with_rag": "ERROR: 422 Client Error: Unprocessable Content for url: http://127.0.0.1:8000/api/v1/chat"
+}
