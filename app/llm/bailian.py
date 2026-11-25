@@ -12,20 +12,6 @@ class BailianChatClient:
             base_url=settings.bailian_base_url
         )
 
-    # async def complete(self, messages: list[dict[str, str]]) -> str:
-    #     if not self.settings.dashscope_api_key:
-    #         raise ValueError("未配置百炼 API Key")
-    #
-    #     try:
-    #         response = await self.client.chat.completions.create(
-    #             model=self.settings.bailian_model,
-    #             messages=messages,
-    #             temperature=self.settings.model_temperature
-    #         )
-    #     except Exception as exc:
-    #         raise RuntimeError("百炼大模型调用失败") from exc
-    #
-    #     return response.choices[0].message.content or ""
     async def complete(self, messages: Sequence[dict[str, str]]) -> str:
         if not self.settings.dashscope_api_key:
             raise ValueError("DASHSCOPE_API_KEY is not configured. Please set the Bailian API Key in .env.")

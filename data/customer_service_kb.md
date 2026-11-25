@@ -1,7 +1,7 @@
-# 售后服务
+# After-sales Service
 
-商品签收后 7 天内，如商品保持完好且配件齐全，可通过订单详情页提交退货申请。
+If the goods are received and remain in good condition along with all accessories, a return application can be submitted through the order details page within 7 days after receipt.
 
-退款审核通过后，原路退款通常在 3—10 个工作日到账；具体到账时间以支付机构为准。
+After the refund application is approved, the original payment method will usually be credited back within 3 to 10 working days; the exact arrival time may vary depending on the payment institution.
 
-人工客服服务时间为工作日 09:00—18:00。
+The customer service hours are from 09:00 to 18:00 on working days.

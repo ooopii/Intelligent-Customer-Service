@@ -26,9 +26,9 @@ def test_retriever():
     retriever = Retriever(kb, top_k=3)
 
     questions = [
-        "新能源行业未来有哪些投资机会？",
-        "储能行业未来的发展机会是什么？",
-        "光伏行业未来的盈利情况怎么样？",
+        "What are the development opportunities in the renewable energy industry?",
+        "What are the main opportunities in the energy storage sector?",
+        "What factors influence the profitability of solar photovoltaic companies?",
     ]
 
     for question in questions:
